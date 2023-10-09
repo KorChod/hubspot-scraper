@@ -71,7 +71,7 @@ def extract_data(blog_post):
     ranked_phrases = [phrase for phrase in ranked_phrases if words_condition(phrase[1].split())]
     top_ranked_phrases = ranked_phrases[:LIMIT_KEY_PHRASES]
 
-    return blog_post.url, word_count, letter_count, top_ranked_phrases
+    return (blog_post.url, word_count, letter_count, top_ranked_phrases)
 
 
 def process_data(blog_posts):
